@@ -9,7 +9,7 @@
     <groupId>com.basavaraj</groupId>
     <artifactId>myapp</artifactId>
     <version>1.0.0</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <name>MyApp</name>
     <description>A simple Java app using Maven</description>
