@@ -1,16 +1,18 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
                              https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example</groupId>
-    <artifactId>my-app</artifactId>
+    <!-- Your groupId should match your package structure -->
+    <groupId>com.basavaraj</groupId>
+    <artifactId>myapp</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>My Java App</name>
-    <description>A simple Java project with Maven</description>
+    <name>MyApp</name>
+    <description>A simple Java app using Maven</description>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -19,12 +21,20 @@
     </properties>
 
     <dependencies>
-        <!-- JUnit for testing -->
+        <!-- JUnit 5 for unit testing -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>5.10.2</version>
             <scope>test</scope>
+        </dependency>
+
+        <!-- (Optional) Lombok for reducing boilerplate code -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -32,6 +42,7 @@
         <plugins>
             <!-- Compiler plugin -->
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
@@ -40,7 +51,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Surefire plugin for running tests -->
+            <!-- Surefire plugin for test execution -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -48,4 +59,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
